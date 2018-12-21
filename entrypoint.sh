@@ -19,6 +19,6 @@ usermod -d $VOLUME -s /bin/bash ${USERNAME}
         chmod 400 /root/.ssh/authorized_keys
         chown root:root /root/.ssh/authorized_keys
     fi
-    exec /usr/sbin/sshd
-
+    exec /usr/sbin/sshd &
+EOF
 exec "$@"
