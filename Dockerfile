@@ -20,7 +20,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # Setup rsync
 EXPOSE 873
 
+CMD ["rsync_server"]
+ENTRYPOINT ["/entrypoint.sh"]
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 744 /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
